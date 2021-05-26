@@ -16,7 +16,7 @@
     <script src="oidc-client.js"></script>
     <script>
         new Oidc.UserManager({ response_mode: "query" }).signinRedirectCallback().then(function () {
-            window.location = "index.html";
+            window.location = "index";
         }).catch(function (e) {
             console.error(e);
         });

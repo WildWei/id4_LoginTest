@@ -37,11 +37,10 @@ namespace JavaScript_client
                 app.UseExceptionHandler("/Error");
             }
 
+            app.UseDefaultFiles();
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

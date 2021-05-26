@@ -40,6 +40,9 @@ namespace id4_quick_test_1
         {
             app.UseDeveloperExceptionPage();
 
+            // 為了解決 Strict 過於嚴格的限制，Lax 在以下情況即使是 Cross-site 依然會送出 Cookie
+            app.UseCookiePolicy(new CookiePolicyOptions { MinimumSameSitePolicy = Microsoft.AspNetCore.Http.SameSiteMode.Lax });
+            
             //for QuickStart-UI 啟用靜態檔案
             app.UseStaticFiles();
             app.UseRouting();
